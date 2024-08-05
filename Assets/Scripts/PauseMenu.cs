@@ -19,9 +19,9 @@ public class PauseMenu : MonoBehaviour
     public Button PlayButton;
     public Button ExitButton;
     public string StartMenu;
+    public static bool GamePaused { get; private set; } = false;
 
     //Private Fields
-    private bool gamePaused = false;
     private bool controlEnable = true;
 
     // Start is called before the first frame update
@@ -46,11 +46,13 @@ public class PauseMenu : MonoBehaviour
     void TaskOnClickPause()
     {
         Debug.Log("Game Paused");
-        if (!gamePaused)
+        if (!GamePaused)
         {
             Time.timeScale = 0;
-            gamePaused = true;
+            GamePaused = true;
             controlEnable = false;
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
             BlackImage.gameObject.SetActive(true);
             PlayBtn.gameObject.SetActive(true);
             ExitBtn.gameObject.SetActive(true);
@@ -68,11 +70,13 @@ public class PauseMenu : MonoBehaviour
     void TaskOnClickPlay()
     {
         Debug.Log("Resuming Game");
-        if (gamePaused)
+        if (GamePaused)
         {
             Time.timeScale = 1;
-            gamePaused = false;
+            GamePaused = false;
             controlEnable = true;
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
             BlackImage.gameObject.SetActive(false);
             PlayBtn.gameObject.SetActive(false);
             ExitBtn.gameObject.SetActive(false);
@@ -97,7 +101,15 @@ public class PauseMenu : MonoBehaviour
     {
         if(Input.GetKeyDown("escape"))
         {
-            TaskOnClickPause();
+            if(GamePaused)
+            {
+                TaskOnClickPlay();
+            }
+
+            else 
+            {
+                TaskOnClickPause();
+            }
         }
     }
 }

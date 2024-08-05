@@ -15,6 +15,7 @@ public class CameraSnapping : MonoBehaviour
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked; // Lock the cursor to the center of the screen
+        Cursor.visible = false;
     }
 
     // Update is called once per frame
@@ -22,6 +23,11 @@ public class CameraSnapping : MonoBehaviour
     {
         // Snap camera position to player position with offset
         transform.position = player.position + offset;
+
+        if (PauseMenu.GamePaused)
+        {
+            return;
+        }
 
         // Mouse input for looking around
         float mouseX = Input.GetAxis("Mouse X") * lookSpeed;

@@ -36,12 +36,12 @@ public class PlayerMovement : MonoBehaviour
         // Create movement vector relative to the camera's direction
         Vector3 movement = (forward * moveVertical + right * moveHorizontal).normalized;
 
-        // Move the capsule
-        if (movement.magnitude > 0)
-        {
-            rb.MovePosition(transform.position + movement * moveSpeed * Time.deltaTime);
+        //Applying movement to the Rigidbody
+        rb.velocity = new Vector3(movement.x, rb.velocity.y, movement.z);
 
-            // Rotate the capsule to face the movement direction
+        //Rotate the capsule to face the movement direction
+        if (movement.magnitude > 0.1)
+        {
             Quaternion targetRotation = Quaternion.LookRotation(movement);
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, Time.deltaTime * 10f);
         }
