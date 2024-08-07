@@ -15,14 +15,17 @@ public class PauseMenu : MonoBehaviour
     public GameObject PlayBtn;
     public GameObject ExitBtn;
     public GameObject BlackImage;
+    public AudioSource audioSource; //Using lower case for consistency
     public Button PauseButton;
     public Button PlayButton;
     public Button ExitButton;
+    public float volume = 3f; //Lower case as AudioSource only has a definition for "volume" not "Volume"
     public string StartMenu;
     public static bool GamePaused { get; private set; } = false;
 
     //Private Fields
     private bool controlEnable = true;
+    private bool musicPaused = false;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +43,8 @@ public class PauseMenu : MonoBehaviour
         BlackImage.gameObject.SetActive(false);
         PlayBtn.gameObject.SetActive(false);
         ExitBtn.gameObject.SetActive(false);
+
+        audioSource.volume = 1f;
     }
 
     //Task to pause game
@@ -58,11 +63,11 @@ public class PauseMenu : MonoBehaviour
             ExitBtn.gameObject.SetActive(true);
         }
         //Mute audio
-        /*if (audioSource.isPlaying)
+        if (audioSource.isPlaying)
         {
             audioSource.Pause();
             musicPaused = true;
-        }*/
+        }
 
     }
 
@@ -82,11 +87,11 @@ public class PauseMenu : MonoBehaviour
             ExitBtn.gameObject.SetActive(false);
         }
         //Unmute audio
-        /*if (musicPaused)
+        if (musicPaused)
         {
             audioSource.UnPause();
             musicPaused = false;
-        }*/
+        }
     }
 
     //Task for selecting exit button
