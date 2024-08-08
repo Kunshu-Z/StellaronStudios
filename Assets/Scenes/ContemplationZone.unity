@@ -1611,7 +1611,6 @@ MonoBehaviour:
   PauseButton: {fileID: 684478488}
   PlayButton: {fileID: 1058603829}
   ExitButton: {fileID: 1518574946}
-  volume: 3
   StartMenu: SampleScene
 --- !u!1 &756159596
 GameObject:
@@ -1716,7 +1715,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: d998443996554b444aa5968eedf94646, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1832,8 +1831,13 @@ MonoBehaviour:
   sound1: {fileID: 8300000, guid: a3ddd40e6040f394698899c1e66a80a8, type: 3}
   sound2: {fileID: 8300000, guid: d998443996554b444aa5968eedf94646, type: 3}
   sound3: {fileID: 8300000, guid: 9ffec616800816a45b51288e57d057e6, type: 3}
+<<<<<<< Updated upstream
   volume: 10
   amplification: 15
+=======
+  volume: 1
+  amplification: 10
+>>>>>>> Stashed changes
 --- !u!1 &778409189
 GameObject:
   m_ObjectHideFlags: 0

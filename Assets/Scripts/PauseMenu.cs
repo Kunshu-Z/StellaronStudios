@@ -19,7 +19,6 @@ public class PauseMenu : MonoBehaviour
     public Button PauseButton;
     public Button PlayButton;
     public Button ExitButton;
-    public float volume = 3f; //Lower case as AudioSource only has a definition for "volume" not "Volume"
     public string StartMenu;
     public static bool GamePaused { get; private set; } = false;
 
@@ -44,7 +43,6 @@ public class PauseMenu : MonoBehaviour
         PlayBtn.gameObject.SetActive(false);
         ExitBtn.gameObject.SetActive(false);
 
-        audioSource.volume = 1f;
     }
 
     //Task to pause game

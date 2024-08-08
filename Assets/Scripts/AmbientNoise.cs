@@ -35,6 +35,7 @@ public class AmbientNoise : MonoBehaviour
             // Play each sound in the list
             foreach (AudioClip sound in sounds)
             {
+                //Plays the amplified clip instead of the original
                 AudioClip amplifiedSound = AmplifyAudioClip(sound, amplification);
                 audioSource.clip = amplifiedSound;
                 audioSource.Play();
@@ -58,14 +59,16 @@ public class AmbientNoise : MonoBehaviour
 
     AudioClip AmplifyAudioClip(AudioClip originalClip, float amplificationFactor)
     {
+
         float[] data = new float[originalClip.samples * originalClip.channels];
+
         originalClip.GetData(data, 0);
 
         for (int i = 0; i < data.Length; i++)
         {
             data[i] *= amplificationFactor;
         }
-
+        //creates a new audio file based on the amplification value that is set so it can be heard better
         AudioClip amplifiedClip = AudioClip.Create(originalClip.name + "_amplified", originalClip.samples, originalClip.channels, originalClip.frequency, false);
         amplifiedClip.SetData(data, 0);
 
