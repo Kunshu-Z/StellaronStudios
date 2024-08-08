@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: RealisticSky
-  m_Shader: {fileID: -6465566751694194690, guid: 1affc6b836b61964eb10940ae9aaedda,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: 1affc6b836b61964eb10940ae9aaedda, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -53,31 +52,31 @@ Material:
     m_Floats:
     - _Anisotropy: 0.76
     - _B: -2
-    - _CloudAnisotropy: 0.9
-    - _CloudBrightness: 60
-    - _CloudDensity: 2
+    - _CloudAnisotropy: 0.784
+    - _CloudBrightness: 99
+    - _CloudDensity: 18.7
     - _CloudDensitySmoothness: 1
-    - _CloudHeight: 0
+    - _CloudHeight: 0.82
     - _CloudPhase: 0
     - _CloudScale: 0.5
     - _CloudSmoothness: 0.35
-    - _CloudSoftness: 0.5
-    - _CloudSpeed: 5
-    - _CloudThickness: 0.1
-    - _CloudTwirl: 0.5
-    - _DayBrightness: 1
-    - _DayScatterStrength: 1
+    - _CloudSoftness: 0.715
+    - _CloudSpeed: 3
+    - _CloudThickness: 0.501
+    - _CloudTwirl: 0
+    - _DayBrightness: 0.7
+    - _DayScatterStrength: 0.5
     - _DensityAtSeaLevel: 1.225
-    - _DensityPower: 10
+    - _DensityPower: 7
     - _EveningBrightness: 0.25
-    - _EveningScatterStrength: 12
-    - _EveningThreshold: 1.5
+    - _EveningScatterStrength: 9.06
+    - _EveningThreshold: 1.6
     - _IndexOfRefraction: 180
     - _K: 2
     - _N: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Saturation: 1
+    - _Saturation: 0.9
     - _ScaledHeight: 8
     - _ScatterStrength: 20
     - _StarBrightness: 500
@@ -89,7 +88,7 @@ Material:
     - _StarThreshold: 20
     - _Step: 0.6
     - _SunIntensity: 100
-    - _SunSize: 0.1
+    - _SunSize: 0.267
     - _WaveLength: 0
     - _Wavelength: 0
     - _X: 1
