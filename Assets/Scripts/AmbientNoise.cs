@@ -7,7 +7,7 @@ public class AmbientNoise : MonoBehaviour
     public AudioClip sound1; // Slot for the first sound
     public AudioClip sound2; // Slot for the second sound
     public AudioClip sound3; // Slot for the third sound
-    public float volume = 1.0f; // Base volume of the ambient sounds (1.0 is the default max volume)
+    public float volume = 5.0f; // Base volume of the ambient sounds (1.0 is the default max volume)
     public float amplification = 1.0f; // Amplification factor for the volume
 
     private AudioSource audioSource; // Reference to the AudioSource component
