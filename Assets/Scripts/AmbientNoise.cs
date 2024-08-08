@@ -7,6 +7,8 @@ public class AmbientNoise : MonoBehaviour
     public AudioClip sound1; // Slot for the first sound
     public AudioClip sound2; // Slot for the second sound
     public AudioClip sound3; // Slot for the third sound
+    public float volume = 1.0f; // Base volume of the ambient sounds (1.0 is the default max volume)
+    public float amplification = 1.0f; // Amplification factor for the volume
 
     private AudioSource audioSource; // Reference to the AudioSource component
     private List<AudioClip> sounds; // List to store the sounds
@@ -33,7 +35,8 @@ public class AmbientNoise : MonoBehaviour
             // Play each sound in the list
             foreach (AudioClip sound in sounds)
             {
-                audioSource.clip = sound;
+                AudioClip amplifiedSound = AmplifyAudioClip(sound, amplification);
+                audioSource.clip = amplifiedSound;
                 audioSource.Play();
 
                 // Wait for the sound to finish playing
@@ -51,5 +54,21 @@ public class AmbientNoise : MonoBehaviour
             sounds[i] = sounds[randomIndex];
             sounds[randomIndex] = temp;
         }
+    }
+
+    AudioClip AmplifyAudioClip(AudioClip originalClip, float amplificationFactor)
+    {
+        float[] data = new float[originalClip.samples * originalClip.channels];
+        originalClip.GetData(data, 0);
+
+        for (int i = 0; i < data.Length; i++)
+        {
+            data[i] *= amplificationFactor;
+        }
+
+        AudioClip amplifiedClip = AudioClip.Create(originalClip.name + "_amplified", originalClip.samples, originalClip.channels, originalClip.frequency, false);
+        amplifiedClip.SetData(data, 0);
+
+        return amplifiedClip;
     }
 }
