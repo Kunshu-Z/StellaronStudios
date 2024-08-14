@@ -21,6 +21,7 @@ public class PauseMenu : MonoBehaviour
     public Button ExitButton;
     public string StartMenu;
     public static bool GamePaused { get; private set; } = false;
+    public Animator animator;
 
     //Private Fields
     private bool controlEnable = true;
@@ -44,6 +45,11 @@ public class PauseMenu : MonoBehaviour
         ExitBtn.gameObject.SetActive(false);
 
     }
+
+    /*public void FadeToLevel(int levelIndex)
+    {
+        animator.SetTrigger.("FadeOut");
+    }*/
 
     //Task to pause game
     void TaskOnClickPause()
@@ -96,6 +102,9 @@ public class PauseMenu : MonoBehaviour
     void TaskOnClickExit()
     {
         Debug.Log("Exiting back to menu...");
+        BlackImage.gameObject.SetActive(false);
+        PlayBtn.gameObject.SetActive(false);
+        ExitBtn.gameObject.SetActive(false);
         SceneManager.LoadScene(StartMenu);
     }
 
