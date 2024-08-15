@@ -1,7 +1,10 @@
-﻿using UnityEngine;
+﻿//THIS SCRIPT WAS NOT ORIGINALLY PRODUCED BY STELLARON STUDIOS
+//LINK TO ORIGINAL ASSET PACK: https://assetstore.unity.com/packages/3d/vegetation/trees/conifers-botd-142076  
+
+using UnityEngine;
 using System.Collections;
 
-namespace CTI {
+namespace StellaronStudios {
 
     [ExecuteInEditMode]
 	[RequireComponent (typeof (WindZone))]
