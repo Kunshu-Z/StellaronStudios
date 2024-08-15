@@ -933,7 +933,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Startbtn: {fileID: 1050027967}
   StartButton: {fileID: 1050027969}
-  VRContemplation: ContemplationZone
+  animator: {fileID: 1551956590}
+  changeScene: 0
 --- !u!1 &2116546494
 GameObject:
   m_ObjectHideFlags: 0

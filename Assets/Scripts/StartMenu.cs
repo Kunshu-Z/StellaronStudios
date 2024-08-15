@@ -10,10 +10,14 @@ using UnityEngine.SceneManagement;
 
 public class StartMenu : MonoBehaviour
 {
-    //Fields
+    //Public Fields
     public GameObject Startbtn;
     public Button StartButton;
-    public string VRContemplation;
+    public Animator animator;
+    public bool changeScene = false;
+
+    //Private Fields
+    private int ContemplationZone;
 
     // Start is called before the first frame update
     void Start()
@@ -26,12 +30,26 @@ public class StartMenu : MonoBehaviour
     void TaskOnClickStart()
     {
         Debug.Log("You have clicked Start Button!");
-        SceneManager.LoadScene(VRContemplation);
+        changeScene = true;
+    }
+
+    public void FadeToScene(int sceneIndex)
+    {
+        ContemplationZone = sceneIndex;
+        animator.SetTrigger("FadeOut");
+    }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene(ContemplationZone);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(changeScene == true)
+        {
+            FadeToScene(1);
+        }
     }
 }
