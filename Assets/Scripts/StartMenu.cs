@@ -14,10 +14,10 @@ public class StartMenu : MonoBehaviour
     public GameObject Startbtn;
     public Button StartButton;
     public Animator animator;
-    public bool changeScene = false;
 
     //Private Fields
     private int ContemplationZone;
+    private bool changeScene = false;
 
     // Start is called before the first frame update
     void Start()
@@ -33,6 +33,7 @@ public class StartMenu : MonoBehaviour
         changeScene = true;
     }
 
+    //Method to trigger the FadeOut animation
     public void FadeToScene(int sceneIndex)
     {
         ContemplationZone = sceneIndex;
