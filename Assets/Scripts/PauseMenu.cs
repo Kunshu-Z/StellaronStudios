@@ -19,13 +19,14 @@ public class PauseMenu : MonoBehaviour
     public Button PauseButton;
     public Button PlayButton;
     public Button ExitButton;
-    public string StartMenu;
     public static bool GamePaused { get; private set; } = false;
     public Animator animator;
 
     //Private Fields
     private bool controlEnable = true;
     private bool musicPaused = false;
+    private bool changeScene = false;
+    private int startMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -45,11 +46,6 @@ public class PauseMenu : MonoBehaviour
         ExitBtn.gameObject.SetActive(false);
 
     }
-
-    /*public void FadeToLevel(int levelIndex)
-    {
-        animator.SetTrigger.("FadeOut");
-    }*/
 
     //Task to pause game
     void TaskOnClickPause()
@@ -105,7 +101,27 @@ public class PauseMenu : MonoBehaviour
         BlackImage.gameObject.SetActive(false);
         PlayBtn.gameObject.SetActive(false);
         ExitBtn.gameObject.SetActive(false);
-        SceneManager.LoadScene(StartMenu);
+        changeScene = true;
+        SceneManager.LoadScene(startMenu);
+    }
+
+    //Task to start app (switch scenes to VR Contemplation)
+    void TaskOnClickStart()
+    {
+        Debug.Log("You have clicked Start Button!");
+        changeScene = true;
+    }
+
+    //Method to trigger the FadeOut animation
+    public void FadeToScene(int sceneIndex)
+    {
+        startMenu = sceneIndex;
+        animator.SetTrigger("FadeOut");
+    }
+
+    public void OnFadeComplete()
+    {
+        SceneManager.LoadScene(startMenu);
     }
 
     // Update is called once per frame
@@ -122,6 +138,12 @@ public class PauseMenu : MonoBehaviour
             {
                 TaskOnClickPause();
             }
+        }
+
+        if (changeScene)
+        {
+            FadeToScene(startMenu);
+            changeScene = false;
         }
     }
 }
