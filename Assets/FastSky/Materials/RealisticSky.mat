@@ -64,10 +64,10 @@ Material:
     - _CloudSpeed: 3
     - _CloudThickness: 0.501
     - _CloudTwirl: 0
-    - _DayBrightness: 0.7
-    - _DayScatterStrength: 0.5
+    - _DayBrightness: 1.26
+    - _DayScatterStrength: 24.18
     - _DensityAtSeaLevel: 1.225
-    - _DensityPower: 7
+    - _DensityPower: 8.4
     - _EveningBrightness: 0.25
     - _EveningScatterStrength: 9.06
     - _EveningThreshold: 1.6
@@ -76,7 +76,7 @@ Material:
     - _N: 0
     - _QueueControl: 0
     - _QueueOffset: 0
-    - _Saturation: 0.9
+    - _Saturation: 0.85
     - _ScaledHeight: 8
     - _ScatterStrength: 20
     - _StarBrightness: 500
@@ -88,7 +88,7 @@ Material:
     - _StarThreshold: 20
     - _Step: 0.6
     - _SunIntensity: 100
-    - _SunSize: 0.267
+    - _SunSize: 0.36
     - _WaveLength: 0
     - _Wavelength: 0
     - _X: 1
@@ -100,7 +100,7 @@ Material:
     - _Colour_Weights: {r: 1, g: 1, b: 1, a: 0}
     - _DayColour: {r: 1, g: 1, b: 1, a: 1}
     - _DensityRemap: {r: 0.1, g: 2, b: 0, a: 0}
-    - _EveningColour: {r: 1, g: 0.5019609, b: 0.5019608, a: 1}
+    - _EveningColour: {r: 1, g: 0.5019608, b: 0.6283776, a: 1}
     - _ScatteringCoefficients: {r: 5.8, g: 13.5, b: 33.1, a: 0}
     - _SizeMultiplier: {r: 1, g: 0.1, b: 1, a: 0}
     - _SkyColour: {r: 1, g: 1, b: 1, a: 1}
