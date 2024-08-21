@@ -9,6 +9,6 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScene.unity
     guid: 364da4315ed8d2e4da1dff1cdcc1556e
   - enabled: 1
-    path: Assets/Scenes/ContemplationZone.unity
+    path: Assets/Scenes/ContemplationZone1.unity
     guid: daa307fd7fc30e94ab9ff09720b8df9a
   m_configObjects: {}
