@@ -6,11 +6,99 @@ public class Water_Volume : ScriptableRendererFeature
 {
     class CustomRenderPass : ScriptableRenderPass
     {
+        private Material _material;
+        private RTHandle tempRenderTarget;
+
+        public CustomRenderPass(Material mat)
+        {
+            _material = mat;
+        }
+
+        // This method is called before executing the render pass.
+        public override void Configure(CommandBuffer cmd, RenderTextureDescriptor cameraTextureDescriptor)
+        {
+            // Create the temporary RTHandle
+            RenderingUtils.ReAllocateIfNeeded(ref tempRenderTarget, cameraTextureDescriptor, FilterMode.Bilinear, TextureWrapMode.Clamp, name: "_TemporaryColourTexture");
+        }
+
+        // Here you can implement the rendering logic.
+        public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
+        {
+            if (renderingData.cameraData.cameraType != CameraType.Reflection)
+            {
+                CommandBuffer cmd = CommandBufferPool.Get("WaterVolumePass");
+
+                // Blit source to tempRenderTarget
+                Blit(cmd, renderingData.cameraData.renderer.cameraColorTargetHandle, tempRenderTarget, _material);
+
+                // Blit tempRenderTarget back to the source
+                Blit(cmd, tempRenderTarget, renderingData.cameraData.renderer.cameraColorTargetHandle);
+
+                context.ExecuteCommandBuffer(cmd);
+                CommandBufferPool.Release(cmd);
+            }
+        }
+
+        /// Cleanup any allocated resources that were created during the execution of this render pass.
+        public override void OnCameraCleanup(CommandBuffer cmd)
+        {
+            // Release the temporary RTHandle
+            if (tempRenderTarget != null)
+            {
+                tempRenderTarget.Release();
+                tempRenderTarget = null;
+            }
+        }
+    }
+
+    [System.Serializable]
+    public class _Settings
+    {
+        public Material material = null;
+        public RenderPassEvent renderPass = RenderPassEvent.AfterRenderingSkybox;
+    }
+
+    public _Settings settings = new _Settings();
+
+    CustomRenderPass m_ScriptablePass;
+
+    public override void Create()
+    {
+        if (settings.material == null)
+        {
+            settings.material = (Material)Resources.Load("Water_Volume");
+        }
+
+        m_ScriptablePass = new CustomRenderPass(settings.material);
+
+        // Configures where the render pass should be injected.
+        m_ScriptablePass.renderPassEvent = settings.renderPass;
+    }
+
+    public override void AddRenderPasses(ScriptableRenderer renderer, ref RenderingData renderingData)
+    {
+        renderer.EnqueuePass(m_ScriptablePass);
+    }
+}
+
+
+/*
+ 
+Old code for backup purposes
+
+ using UnityEngine;
+using UnityEngine.Rendering;
+using UnityEngine.Rendering.Universal;
+
+public class Water_Volume : ScriptableRendererFeature
+{
+    class CustomRenderPass : ScriptableRenderPass
+    {
         public RenderTargetIdentifier source;
 
         private Material _material;
 
-        private RenderTargetHandle tempRenderTarget;
+        private RTHandle tempRenderTarget;
         private RenderTargetHandle tempRenderTarget2;
 
         public CustomRenderPass(Material mat)
@@ -92,3 +180,5 @@ public class Water_Volume : ScriptableRendererFeature
 }
 
 
+
+ */
