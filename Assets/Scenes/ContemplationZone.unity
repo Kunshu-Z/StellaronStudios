@@ -991,18 +991,18 @@ MonoBehaviour:
   - {x: 211.11444, y: 8.667803, z: 36.537323, w: 4}
   - {x: 210.96042, y: 8.674154, z: 39.6127, w: 4}
   controlPointsRotations:
-  - {x: 0.07850535, y: -3.5007375e-11, z: 3.7219886e-10, w: 0.9969136}
+  - {x: 0.07850536, y: -3.500738e-11, z: 3.7219888e-10, w: 0.9969137}
   - {x: 0.012660757, y: 0.6090183, z: 0.009723445, w: 0.79299545}
   - {x: 0.000000017617392, y: 0.000000011781215, z: 0.018155202, w: 0.9998352}
   - {x: 0.0000000072102004, y: 0.26343018, z: -0.000000012288405, w: 0.96467847}
   - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1.0000001}
   - {x: 0, y: 0, z: 0, w: 1}
   - {x: 0, y: 0, z: 0, w: 1}
   - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1.0000001}
   - {x: 0, y: 0, z: 0, w: 1}
-  - {x: 0, y: 0, z: 0, w: 1.0000001}
+  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: 0, y: 0, z: 0, w: 1}
+  - {x: 0, y: 0, z: 0, w: 1}
   - {x: 0, y: 0, z: 0, w: 1}
   - {x: 0, y: 0, z: 0, w: 1}
   controlPointsOrientation:
@@ -14989,15 +14989,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3080507131673006616, guid: 5bcd9694c83f62b4aad7e33159cc3b3e, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 207.88
+      value: 208.25
       objectReference: {fileID: 0}
     - target: {fileID: 3080507131673006616, guid: 5bcd9694c83f62b4aad7e33159cc3b3e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 20
+      value: 18.99
       objectReference: {fileID: 0}
     - target: {fileID: 3080507131673006616, guid: 5bcd9694c83f62b4aad7e33159cc3b3e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.48
+      value: -20.18
       objectReference: {fileID: 0}
     - target: {fileID: 3080507131673006616, guid: 5bcd9694c83f62b4aad7e33159cc3b3e, type: 3}
       propertyPath: m_LocalRotation.w
