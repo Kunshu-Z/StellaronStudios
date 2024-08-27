@@ -9,6 +9,8 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: R2_River_Offset_Swamp_Leaves
   m_Shader: {fileID: 4800000, guid: 0b47d27971ed4b1418e10f8a7b877a57, type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
   - _SPECULAR_SETUP
   - _SURFACE_TYPE_TRANSPARENT
@@ -23,8 +25,8 @@ Material:
     MotionVector: User
     RenderType: Transparent
   disabledShaderPasses:
-  - MOTIONVECTORS
   - TransparentBackface
+  m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -204,6 +206,7 @@ Material:
     - _AlphaCutoffEnable: 0
     - _AlphaDstBlend: 10
     - _AlphaSrcBlend: 1
+    - _AlphaToMask: 0
     - _BackfaceAlpha: 0.85
     - _BigCascadeAngle: 7
     - _BigCascadeAngleFalloff: 2.3
@@ -220,6 +223,7 @@ Material:
     - _BigCascadeWaterTessScale: 0.3
     - _Blend: 0
     - _BlendMode: 0
+    - _BlendModePreserveSpecular: 0
     - _CascadeAngle: 3.4
     - _CascadeAngleFalloff: 0.7
     - _CascadeFalloff: 0.84
@@ -446,3 +450,4 @@ Material:
     - _WaterMixSpeed: {r: 0.002, g: 0.002, b: 0, a: 0}
     - _WaterTiling: {r: 2, g: 2, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
