@@ -16,6 +16,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject ExitBtn;
     public GameObject BlackImage;
     public AudioSource audioSource; //Using lower case for consistency
+    public AudioSource streamAudioSource;
     public Button PauseButton;
     public Button PlayButton;
     public Button ExitButton;
@@ -69,6 +70,13 @@ public class PauseMenu : MonoBehaviour
             musicPaused = true;
         }
 
+        //Mute stream audio
+        if (streamAudioSource.isPlaying)
+        {
+            streamAudioSource.Pause();
+            musicPaused = true;
+        }
+
     }
 
     //Task to play game
@@ -90,6 +98,7 @@ public class PauseMenu : MonoBehaviour
         if (musicPaused)
         {
             audioSource.UnPause();
+            streamAudioSource.UnPause();
             musicPaused = false;
         }
     }
