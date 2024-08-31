@@ -15,7 +15,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject PlayBtn;
     public GameObject ExitBtn;
     public GameObject BlackImage;
-    public AudioSource audioSource; //Using lower case for consistency
+    public AudioSource audioSource;
     public AudioSource streamAudioSource;
     public Button PauseButton;
     public Button PlayButton;
@@ -32,23 +32,18 @@ public class PauseMenu : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Pause button code
         Button Pause = PauseButton.GetComponent<Button>();
         Pause.onClick.AddListener(TaskOnClickPause);
-        //Play button code
         Button Play = PlayButton.GetComponent<Button>();
         Play.onClick.AddListener(TaskOnClickPlay);
-        //Exit to Menu button code
         Button Exit = ExitButton.GetComponent<Button>();
         Exit.onClick.AddListener(TaskOnClickExit);
 
         BlackImage.gameObject.SetActive(false);
         PlayBtn.gameObject.SetActive(false);
         ExitBtn.gameObject.SetActive(false);
-
     }
 
-    //Task to pause game
     void TaskOnClickPause()
     {
         Debug.Log("Game Paused");
@@ -63,23 +58,20 @@ public class PauseMenu : MonoBehaviour
             PlayBtn.gameObject.SetActive(true);
             ExitBtn.gameObject.SetActive(true);
         }
-        //Mute audio
+
         if (audioSource.isPlaying)
         {
             audioSource.Pause();
             musicPaused = true;
         }
 
-        //Mute stream audio
         if (streamAudioSource.isPlaying)
         {
             streamAudioSource.Pause();
             musicPaused = true;
         }
-
     }
 
-    //Task to play game
     void TaskOnClickPlay()
     {
         Debug.Log("Resuming Game");
@@ -94,7 +86,7 @@ public class PauseMenu : MonoBehaviour
             PlayBtn.gameObject.SetActive(false);
             ExitBtn.gameObject.SetActive(false);
         }
-        //Unmute audio
+
         if (musicPaused)
         {
             audioSource.UnPause();
@@ -103,7 +95,6 @@ public class PauseMenu : MonoBehaviour
         }
     }
 
-    //Task for selecting exit button
     void TaskOnClickExit()
     {
         Debug.Log("Exiting back to menu...");
@@ -111,39 +102,36 @@ public class PauseMenu : MonoBehaviour
         PlayBtn.gameObject.SetActive(false);
         ExitBtn.gameObject.SetActive(false);
         changeScene = true;
-        SceneManager.LoadScene(startMenu);
     }
 
-    //Task to start app (switch scenes to VR Contemplation)
     void TaskOnClickStart()
     {
         Debug.Log("You have clicked Start Button!");
         changeScene = true;
     }
 
-    //Method to trigger the FadeOut animation
     public void FadeToScene(int sceneIndex)
     {
         startMenu = sceneIndex;
+        Debug.Log($"Fading to scene index {sceneIndex}");
         animator.SetTrigger("FadeOut");
     }
 
     public void OnFadeComplete()
     {
+        Debug.Log("Fade complete. Loading scene...");
         SceneManager.LoadScene(startMenu);
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown("escape"))
+        if (Input.GetKeyDown("escape"))
         {
-            if(GamePaused)
+            if (GamePaused)
             {
                 TaskOnClickPlay();
             }
-
-            else 
+            else
             {
                 TaskOnClickPause();
             }
@@ -151,8 +139,10 @@ public class PauseMenu : MonoBehaviour
 
         if (changeScene)
         {
-            FadeToScene(startMenu);
+            Debug.Log("Starting scene transition...");
+            FadeToScene(0);
             changeScene = false;
         }
     }
 }
+
