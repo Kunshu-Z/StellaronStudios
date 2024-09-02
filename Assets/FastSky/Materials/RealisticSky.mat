@@ -53,17 +53,17 @@ Material:
     m_Floats:
     - _Anisotropy: 0.76
     - _B: -2
-    - _CloudAnisotropy: 0.784
+    - _CloudAnisotropy: 0.5
     - _CloudBrightness: 99
-    - _CloudDensity: 14
+    - _CloudDensity: 13.5
     - _CloudDensitySmoothness: 1
     - _CloudHeight: 0.82
     - _CloudPhase: 0
     - _CloudScale: 1
     - _CloudSmoothness: 0.35
-    - _CloudSoftness: 0.715
+    - _CloudSoftness: 1
     - _CloudSpeed: 3
-    - _CloudThickness: 0.501
+    - _CloudThickness: 0.5
     - _CloudTwirl: 0
     - _DayBrightness: 0.5
     - _DayScatterStrength: 0

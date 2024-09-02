@@ -15024,7 +15024,7 @@ Transform:
   m_GameObject: {fileID: 1280499551}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 218.92, y: 13.558612, z: 60.23}
+  m_LocalPosition: {x: 224.59, y: 13.558612, z: 60.23}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17117,7 +17117,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sound1: {fileID: 8300000, guid: a3ddd40e6040f394698899c1e66a80a8, type: 3}
   sound2: {fileID: 8300000, guid: d998443996554b444aa5968eedf94646, type: 3}
-  sound3: {fileID: 8300000, guid: 9ffec616800816a45b51288e57d057e6, type: 3}
+  sound3: {fileID: 8300000, guid: cfb1204adc47e05409f4e949ed955adb, type: 3}
   volume: 15
   amplification: 40
 --- !u!82 &2127425644
@@ -17226,7 +17226,7 @@ Transform:
   m_GameObject: {fileID: 2127425642}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 218.88, y: 13.81, z: 60.2}
+  m_LocalPosition: {x: 224.55, y: 13.81, z: 60.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -17293,7 +17293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1528211360659698709
 Transform:
   m_ObjectHideFlags: 0
@@ -17436,6 +17436,7 @@ SceneRoots:
   - {fileID: 1643522085}
   - {fileID: 1280499555}
   - {fileID: 2127425645}
+  - {fileID: 982737044}
   - {fileID: 740070259}
   - {fileID: 1733188284}
   - {fileID: 690538406}
@@ -17446,4 +17447,3 @@ SceneRoots:
   - {fileID: 301589959}
   - {fileID: 893597269}
   - {fileID: 1415924867}
-  - {fileID: 982737044}
