@@ -15,8 +15,6 @@ public class PauseMenu : MonoBehaviour
     public GameObject PlayBtn;
     public GameObject ExitBtn;
     public GameObject BlackImage;
-    public AudioSource audioSource;
-    public AudioSource streamAudioSource;
     public Button PauseButton;
     public Button PlayButton;
     public Button ExitButton;
@@ -29,7 +27,7 @@ public class PauseMenu : MonoBehaviour
     private bool changeScene = false;
     private int startMenu;
 
-    // Start is called before the first frame update
+    //Start is called before the first frame update
     void Start()
     {
         Button Pause = PauseButton.GetComponent<Button>();
@@ -57,18 +55,11 @@ public class PauseMenu : MonoBehaviour
             BlackImage.gameObject.SetActive(true);
             PlayBtn.gameObject.SetActive(true);
             ExitBtn.gameObject.SetActive(true);
-        }
 
-        if (audioSource.isPlaying)
-        {
-            audioSource.Pause();
-            musicPaused = true;
-        }
-
-        if (streamAudioSource.isPlaying)
-        {
-            streamAudioSource.Pause();
-            musicPaused = true;
+            foreach (var audioSource in FindObjectsOfType<AudioSource>())
+            {
+                audioSource.Pause();
+            }
         }
     }
 
@@ -87,11 +78,9 @@ public class PauseMenu : MonoBehaviour
             ExitBtn.gameObject.SetActive(false);
         }
 
-        if (musicPaused)
+        foreach (var audioSource in FindObjectsOfType<AudioSource>())
         {
             audioSource.UnPause();
-            streamAudioSource.UnPause();
-            musicPaused = false;
         }
     }
 
