@@ -6216,6 +6216,79 @@ MonoBehaviour:
   PlayButton: {fileID: 1058603829}
   ExitButton: {fileID: 1518574946}
   animator: {fileID: 740070258}
+--- !u!1001 &755286110
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_Name
+      value: parkchair
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.030000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.030000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.030000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 218.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 12.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 65.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.29883623
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.29883623
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.64085644
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.64085644
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -130
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4bfc726cb8ba03849be54d8f8aedf586, type: 3}
 --- !u!1 &756159596
 GameObject:
   m_ObjectHideFlags: 0
@@ -17319,3 +17392,4 @@ SceneRoots:
   - {fileID: 301589959}
   - {fileID: 893597269}
   - {fileID: 1415924867}
+  - {fileID: 755286110}
