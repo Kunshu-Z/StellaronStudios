@@ -86,6 +86,9 @@ public class PauseMenu : MonoBehaviour
 
     void TaskOnClickExit()
     {
+        //Setting the timescale back to 1 so the animations and transitions can function
+        Time.timeScale = 1;
+
         Debug.Log("Exiting back to menu...");
         BlackImage.gameObject.SetActive(false);
         PlayBtn.gameObject.SetActive(false);
@@ -103,7 +106,18 @@ public class PauseMenu : MonoBehaviour
     {
         startMenu = sceneIndex;
         Debug.Log($"Fading to scene index {sceneIndex}");
-        animator.SetTrigger("FadeOut");
+
+        //Ensuring the animator is using Unscaled time for the fade
+        if (animator != null)
+        {
+            animator.updateMode = AnimatorUpdateMode.UnscaledTime; //Using Unscaled time for the fade animation
+            animator.SetTrigger("FadeOut");
+        }
+
+        else
+        {
+            Debug.LogError("Animator not set for scene fading.");
+        }
     }
 
     public void OnFadeComplete()
@@ -129,6 +143,8 @@ public class PauseMenu : MonoBehaviour
         if (changeScene)
         {
             Debug.Log("Starting scene transition...");
+            //Reset Time.timeScale to ensure scene loading is smooth
+            Time.timeScale = 1;
             FadeToScene(0);
             changeScene = false;
         }
