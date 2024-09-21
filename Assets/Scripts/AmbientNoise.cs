@@ -1,53 +1,63 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class AmbientNoise : MonoBehaviour
+public class AmbientNoiseManager : MonoBehaviour
 {
-    public AudioClip sound; // Slot for the single sound
-    public float volume = 1.0f; // Base volume of the ambient sound (1.0 is the default max volume)
-    public float amplification = 1.0f; // Amplification factor for the volume
-
-    private AudioSource audioSource; // Reference to the AudioSource component
+    public List<AudioSource> audioSources; // List of audio sources spread across the scene
+    public float fadeDuration = 5.0f;      // Duration for fade in/out
+    public float minVolume = 0.1f;         // Minimum volume (near mute)
+    public float pauseBetweenFades = 2.0f; // Pause between fades
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();
-        audioSource.loop = false; // Ensure the AudioSource does not loop by default
-
-        // Start the coroutine to play the sound
-        StartCoroutine(PlayAmbientSound());
+        // Start the coroutine to control the volume cycling
+        StartCoroutine(CycleAudioSources());
     }
 
-    IEnumerator PlayAmbientSound()
+    IEnumerator CycleAudioSources()
     {
         while (true)
         {
-            // Play the amplified version of the sound
-            AudioClip amplifiedSound = AmplifyAudioClip(sound, amplification);
-            audioSource.clip = amplifiedSound;
-            audioSource.Play();
+            foreach (AudioSource source in audioSources)
+            {
+                // Fade out the current audio source
+                yield return StartCoroutine(FadeOut(source));
 
-            // Wait for the sound to finish playing
-            yield return new WaitForSeconds(sound.length);
+                // Pause for a while before fading back in
+                yield return new WaitForSeconds(pauseBetweenFades);
+
+                // Fade in the current audio source
+                yield return StartCoroutine(FadeIn(source));
+            }
         }
     }
 
-    AudioClip AmplifyAudioClip(AudioClip originalClip, float amplificationFactor)
+    IEnumerator FadeOut(AudioSource source)
     {
-        // Get the audio data from the clip
-        float[] data = new float[originalClip.samples * originalClip.channels];
-        originalClip.GetData(data, 0);
+        float startVolume = source.volume;
 
-        // Amplify the audio data
-        for (int i = 0; i < data.Length; i++)
+        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
         {
-            data[i] *= amplificationFactor;
+            // Gradually reduce volume over time
+            source.volume = Mathf.Lerp(startVolume, minVolume, t / fadeDuration);
+            yield return null; // Wait for the next frame
         }
 
-        // Create a new amplified audio clip
-        AudioClip amplifiedClip = AudioClip.Create(originalClip.name + "_amplified", originalClip.samples, originalClip.channels, originalClip.frequency, false);
-        amplifiedClip.SetData(data, 0);
+        source.volume = minVolume; // Ensure it hits the minimum volume at the end
+    }
 
-        return amplifiedClip;
+    IEnumerator FadeIn(AudioSource source)
+    {
+        float startVolume = source.volume;
+
+        for (float t = 0; t < fadeDuration; t += Time.deltaTime)
+        {
+            // Gradually raise volume back to full over time
+            source.volume = Mathf.Lerp(startVolume, 1.0f, t / fadeDuration);
+            yield return null; // Wait for the next frame
+        }
+
+        source.volume = 1.0f; // Ensure it hits full volume at the end
     }
 }
