@@ -1,3 +1,15 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:638d562830afba7e7838ea5e9164ae9f3ae6c4151a996547d5194b8b1508245b
-size 429
+fileFormatVersion: 2
+guid: 39a733dae78eeff4180b60fa5235d9a7
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 15600000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 279940
+  packageName: Realistic Terrain Textures Lite
+  packageVersion: 1.0
+  assetPath: Assets/ALP_Assets/Realistic Terrain Textures Lite/Scenes/TerrainDATA/Terrain.asset
+  uploadId: 685085
