@@ -78,15 +78,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: c0dc36f31e2b38a4f821c3fe84e0ffb2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -88.813675
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dc36f31e2b38a4f821c3fe84e0ffb2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10.699707
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dc36f31e2b38a4f821c3fe84e0ffb2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -75.294395
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dc36f31e2b38a4f821c3fe84e0ffb2, type: 3}
       propertyPath: m_LocalRotation.w
@@ -94,15 +94,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dc36f31e2b38a4f821c3fe84e0ffb2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dc36f31e2b38a4f821c3fe84e0ffb2, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dc36f31e2b38a4f821c3fe84e0ffb2, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: c0dc36f31e2b38a4f821c3fe84e0ffb2, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -119,7 +119,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: c0dc36f31e2b38a4f821c3fe84e0ffb2, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2cfd46057996df74981a425d08a132db, type: 2}
+      objectReference: {fileID: 2100000, guid: 441144e87204e7a4888d7e50bec3d297, type: 2}
     - target: {fileID: 919132149155446097, guid: c0dc36f31e2b38a4f821c3fe84e0ffb2, type: 3}
       propertyPath: m_Name
       value: Aset_wood_log_M_rgzoN_LOD0
@@ -190,7 +190,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 9c2a2460531808b49b776cd5d2cc6cff, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2cfd46057996df74981a425d08a132db, type: 2}
+      objectReference: {fileID: 2100000, guid: 441144e87204e7a4888d7e50bec3d297, type: 2}
     - target: {fileID: 919132149155446097, guid: 9c2a2460531808b49b776cd5d2cc6cff, type: 3}
       propertyPath: m_Name
       value: Aset_wood_log_M_rgzoN_LOD2
@@ -261,7 +261,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 65a6f522c4afe634eb674b42d053ff67, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2cfd46057996df74981a425d08a132db, type: 2}
+      objectReference: {fileID: 2100000, guid: 441144e87204e7a4888d7e50bec3d297, type: 2}
     - target: {fileID: 919132149155446097, guid: 65a6f522c4afe634eb674b42d053ff67, type: 3}
       propertyPath: m_Name
       value: Aset_wood_log_M_rgzoN_LOD4
@@ -327,7 +327,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: d39131f0f6ee7a94e9562679a27a450d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2cfd46057996df74981a425d08a132db, type: 2}
+      objectReference: {fileID: 2100000, guid: 441144e87204e7a4888d7e50bec3d297, type: 2}
     - target: {fileID: 919132149155446097, guid: d39131f0f6ee7a94e9562679a27a450d, type: 3}
       propertyPath: m_Name
       value: Aset_wood_log_M_rgzoN_LOD3
@@ -393,7 +393,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: d4a140346cad77648b9e43a3935eb03d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2cfd46057996df74981a425d08a132db, type: 2}
+      objectReference: {fileID: 2100000, guid: 441144e87204e7a4888d7e50bec3d297, type: 2}
     - target: {fileID: 919132149155446097, guid: d4a140346cad77648b9e43a3935eb03d, type: 3}
       propertyPath: m_Name
       value: Aset_wood_log_M_rgzoN_LOD5
@@ -459,7 +459,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: aab8ba4a4fd9d7746a180b36ae192b8d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: 2cfd46057996df74981a425d08a132db, type: 2}
+      objectReference: {fileID: 2100000, guid: 441144e87204e7a4888d7e50bec3d297, type: 2}
     - target: {fileID: 919132149155446097, guid: aab8ba4a4fd9d7746a180b36ae192b8d, type: 3}
       propertyPath: m_Name
       value: Aset_wood_log_M_rgzoN_LOD1
