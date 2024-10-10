@@ -160,12 +160,16 @@ Material:
     - _DoubleSidedGIMode: 0
     - _DoubleSidedNormalMode: 1
     - _DstBlend: 0
+    - _DstBlend2: 0
     - _EnableBlendModePreserveSpecularLighting: 1
     - _EnableFogOnTransparent: 1
     - _ExcludeFromTUAndAA: 0
     - _FadeBias: 0.01
     - _ForceForwardEmissive: 0
+    - _MaterialID: 5
+    - _MaterialTypeMask: 32
     - _OpaqueCullMode: 2
+    - _PerPixelSorting: 0
     - _QueueControl: 1
     - _QueueOffset: 0
     - _RayTracing: 0
@@ -189,6 +193,7 @@ Material:
     - _SupportDecals: 0
     - _Surface: 0
     - _SurfaceType: 0
+    - _TransmissionEnable: 1
     - _TransparentBackfaceEnable: 0
     - _TransparentCullMode: 2
     - _TransparentDepthPostpassEnable: 0
@@ -220,3 +225,4 @@ Material:
     - _Subsurface_Scattering_Color: {r: 1, g: 1, b: 1, a: 0}
     - _Thickness_Remap: {r: 0, g: 1, b: 0, a: 0}
   m_BuildTextureStacks: []
+  m_AllowLocking: 1
