@@ -55,7 +55,7 @@ Material:
     - _B: -2
     - _CloudAnisotropy: 0.5
     - _CloudBrightness: 99
-    - _CloudDensity: 13.5
+    - _CloudDensity: 0.98
     - _CloudDensitySmoothness: 1
     - _CloudHeight: 0.82
     - _CloudPhase: 0
