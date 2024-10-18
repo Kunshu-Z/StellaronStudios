@@ -83,13 +83,13 @@ Material:
     - _StarBrightness: 500
     - _StarJitterSpeed: 0.1
     - _StarRotateSpeed: 5
-    - _StarScale: 2
-    - _StarSize: 0.99
-    - _StarSpeed: 0.1
+    - _StarScale: 1
+    - _StarSize: 0.995
+    - _StarSpeed: 0
     - _StarThreshold: 20
     - _Step: 0.6
     - _SunIntensity: 100
-    - _SunSize: 0.36
+    - _SunSize: 0.1
     - _WaveLength: 0
     - _Wavelength: 0
     - _X: 1
