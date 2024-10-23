@@ -1,16 +1,3 @@
 version https://git-lfs.github.com/spec/v1
-oid sha256:907f4918669ebab50f8e0d621c771b2061796867bdf10ec5a35e450986d57fd8
-size 986
-*[[:space:]].tif filter=lfs diff=lfs merge=lfs -text
-*[[:space:]].png filter=lfs diff=lfs merge=lfs -text
-*[[:space:]].zip filter=lfs diff=lfs merge=lfs -text
-Assets/ALP_Assets/Realistic[[:space:]]Terrain[[:space:]]Textures[[:space:]]Lite/Textures/Ground001.tif filter=lfs diff=lfs merge=lfs -text
-Assets/ALP_Assets/Realistic[[:space:]]Terrain[[:space:]]Textures[[:space:]]Lite/Scenes/Terrain/Terrain.asset filter=lfs diff=lfs merge=lfs -text
-Assets/ALP_Assets/Realistic[[:space:]]Terrain[[:space:]]Textures[[:space:]]Lite/Textures/Ground001_N.png filter=lfs diff=lfs merge=lfs -text
-Assets/TerrainTexturesPackFree/TerrainTextures/GrassUV01.png filter=lfs diff=lfs merge=lfs -text
-Assets/TerrainTexturesPackFree/TerrainTextures/GrassUV01.zip filter=lfs diff=lfs merge=lfs -text
-Assets/TerrainTexturesPackFree/TerrainTextures/GrassUV01_N.png filter=lfs diff=lfs merge=lfs -text
-Assets/TerrainTexturesPackFree/TerrainTextures/GrassUV02.png filter=lfs diff=lfs merge=lfs -text
-Assets/TerrainTexturesPackFree/TerrainTextures/GrassUV02_N.png filter=lfs diff=lfs merge=lfs -text
-*[[:space:]].asset filter=lfs diff=lfs merge=lfs -text
-*.resS filter=lfs diff=lfs merge=lfs -text
+oid sha256:d2b91d4aee8da8b7491e1c97de3027faec00bd116b1f47870f0bb5e63fbca43f
+size 1354
