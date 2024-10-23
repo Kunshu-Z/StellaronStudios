@@ -1238,6 +1238,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Startbtn: {fileID: 1050027967}
   StartButton: {fileID: 1050027969}
+  ExitButton: {fileID: 251615512}
   animator: {fileID: 1551956590}
 --- !u!1 &2116546494
 GameObject:

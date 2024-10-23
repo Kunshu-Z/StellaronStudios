@@ -13,6 +13,7 @@ public class StartMenu : MonoBehaviour
     //Public Fields
     public GameObject Startbtn;
     public Button StartButton;
+    public Button ExitButton;
     public Animator animator;
 
     //Private Fields
@@ -24,6 +25,9 @@ public class StartMenu : MonoBehaviour
     {
         Button Startbtn = StartButton.GetComponent<Button>();
         Startbtn.onClick.AddListener(TaskOnClickStart);
+
+        Button Exitbtn = ExitButton.GetComponent<Button>();
+        Exitbtn.onClick.AddListener(TaskOnClickExit);
     }
 
     //Task to start app (switch scenes to VR Contemplation)
@@ -31,6 +35,13 @@ public class StartMenu : MonoBehaviour
     {
         Debug.Log("You have clicked Start Button!");
         changeScene = true;
+    }
+
+    //Task to exit app
+    void TaskOnClickExit()
+    {
+        Debug.Log("You have clicked Exit Button!");
+        Application.Quit();
     }
 
     //Method to trigger the FadeOut animation
